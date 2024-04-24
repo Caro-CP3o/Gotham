@@ -1,0 +1,16 @@
+.strong{
+    color: $gotham;
+    font-weight: $bold;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+@mixin text($font: $text, $fweight: $regular, $size: $textS, $color: $dark, $transform: none){
+    letter-spacing: 0.09em;
+    font-kerning: normal;
+    font-family: $font;
+    font-size: $size;
+    font-weight: $fweight;
+    text-transform: $transform;
+    color: $color;
+}

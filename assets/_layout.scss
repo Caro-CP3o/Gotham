@@ -1,0 +1,55 @@
+@use "sass:math";
+
+// Largeur blocks
+.wrapper{
+    max-width: math.div($fullWidth,1.2);
+    margin: 0 auto;
+}
+// Hauteur blocs d'éléments
+.slide-xs, .slide-s, .slide-sm, .slide-m, .slide-l, .slide{
+    width: 100%;
+    position: relative;
+}
+.slide-xs{
+    height: math.div($fullHeight,9);
+    //10%
+}
+.slide-s{
+    height: math.div($fullHeight,5);
+    //20%
+}
+.slide-sm{
+    height: math.div($fullHeight,3.3);
+    //30%
+}
+.slide-m{
+    height: math.div($fullHeight,2);
+    //50%
+}
+.slide-l{
+    height: math.div($fullHeight,1.1);
+    //90%
+}
+.slide{
+    height: $fullHeight;
+}
+
+// Displays
+@mixin row($direction: row, $flex: 1, $wrap: nowrap){
+    display: flex;
+    flex-wrap: $wrap;
+    flex-direction: $direction;
+    // & > *{
+    //     flex: $flex;
+    // }
+}
+@mixin container($direction: row, $justify: center ,$align: center, $wrap: nowrap){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+    // & > *{
+    //     flex: $flex;
+    // }
+}

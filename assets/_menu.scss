@@ -1,0 +1,21 @@
+@mixin menu($background: $dark, $color: $neutral){
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex: 1;
+    background-color: $background;
+    padding-left: 2rem;
+    li{
+        padding: 1rem;
+        a{
+            color: $color;
+            font-family: $title;
+            font-size: $textXs;
+            font-weight: $light;
+            text-transform: uppercase;
+            &:hover{
+                color: $gotham;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+#home{
+    @import "bouton";
+    #logo-home{
+        @include logo;
+        background-color: $dark;
+        h1{
+            bottom: -20px;
+        }
+    }
+    .container{
+        @include container($justify: space-between);
+    }
+    .text{
+        width: 50%;
+        h1{
+            padding-bottom: 1rem;
+            @include text($font: $title, $fweight: $black, $size: $textL, $transform: uppercase);
+        }
+        p{
+            @include text;
+        }
+    }
+    .callto{
+        border-left: 1px solid $dark;
+        padding-left: 5rem;
+        a{
+            @include callTo;
+        }
+    }
+    .logo{
+        @include logo($color: $colorLight, $justify: space-between);
+    }
+
+}
