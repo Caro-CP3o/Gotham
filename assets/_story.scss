@@ -1,0 +1,35 @@
+#story{
+    background-color: $xtlight;
+    .logo{
+        @include logo($color: $neutral, $justify: space-between);
+        h1{
+            bottom: -3vh;
+            z-index: 300;
+        }
+    }
+    .slide-l{
+        overflow: hidden;
+        .overlay{
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40vw;
+            z-index: 300;
+            h2{
+                @include text($font: $title, $fweight: $black, $size: $textL, $transform: uppercase);
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+            p{
+                @include text;
+            }
+        }
+        img{
+            position: relative;
+            left: -10%;
+            //bottom: -5%;
+            width: 122%;
+        }
+    }
+}

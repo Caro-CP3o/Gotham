@@ -108,7 +108,7 @@ header nav ul li a:hover {
   position: relative;
 }
 #home #logo-home h1 {
-  bottom: -20px;
+  bottom: -3vh;
 }
 #home .container {
   display: flex;
@@ -224,14 +224,72 @@ header nav ul li a:hover {
   display: flex;
   justify-content: center;
   font-family: "Limelight", sans-serif;
-  font-size: 18vw;
+  font-size: 16.7vw;
   text-transform: uppercase;
   color: #F2F2F2;
   padding: 0;
   position: relative;
+  top: -3vh;
 }
 #about .logo h1 h1 {
   position: relative;
+}
+
+#story {
+  background-color: #F2F2F2;
+}
+#story .logo {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Limelight", sans-serif;
+  font-size: 6vw;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding: 0;
+  position: relative;
+}
+#story .logo h1 {
+  position: relative;
+}
+#story .logo h1 {
+  bottom: -3vh;
+  z-index: 300;
+}
+#story .slide-l {
+  overflow: hidden;
+}
+#story .slide-l .overlay {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  z-index: 300;
+}
+#story .slide-l .overlay h2 {
+  letter-spacing: 0.09em;
+  font-kerning: normal;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #1E1E1E;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+#story .slide-l .overlay p {
+  letter-spacing: 0.09em;
+  font-kerning: normal;
+  font-family: "Krub", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: none;
+  color: #1E1E1E;
+}
+#story .slide-l img {
+  position: relative;
+  left: -10%;
+  width: 122%;
 }
 
 /* GENERAL */
