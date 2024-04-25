@@ -1,11 +1,12 @@
-@mixin logo ($justify: center, $color: $neutral, $padding: 0){
+@mixin logo ($justify: center, $color: $neutral, $padding: 0, $size: 6vw){
     display: flex;
     justify-content: $justify;
     font-family: $bat;
-    font-size: 4rem;
+    font-size: $size;
     text-transform: uppercase;
     color: $color;
     padding: $padding;
+    position: relative;
     h1{
         position: relative;
     }

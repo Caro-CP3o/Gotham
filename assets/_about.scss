@@ -1,0 +1,6 @@
+#about{
+    .logo h1{
+        @include logo ($justify: center, $color: $xtlight, $padding: 0, $size: 18vw);
+        //bottom: -2vh;
+    }
+}
