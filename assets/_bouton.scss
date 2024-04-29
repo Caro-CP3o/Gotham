@@ -1,4 +1,4 @@
-@mixin callTo($background: $dark ,$backgroundHv: $gotham, $color: $neutral, $colorHv: $dark){
+@mixin callTo($background: $dark, $color: $neutral, $colorHv: $dark, $padding: 1rem){
     display: block;
     width: max-content;
     text-align: center;
@@ -7,16 +7,14 @@
     font-weight: $light;
     font-size: $textXs;
     font-style: normal;
-    padding: 1rem;
-    //margin-left: auto;
+    padding: $padding;
     background-color: $background;
-    //box-shadow: 2px 2px 4px $dark-shadow;
     border: none;
     color: $color;
     cursor: pointer;
     transition: all .5s ease-in-out;
     &:hover{
-        background-color: $backgroundHv;
+        background-color: $gotham;
         color: $colorHv;
     }
 }
