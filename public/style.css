@@ -431,10 +431,6 @@ header nav ul li a:hover {
     width: 100%;
     padding-bottom: 1rem;
   }
-  #story .slide-m img {
-    left: 0;
-    width: 100%;
-  }
 }
 @media all and (max-width: 575.98px) {
   .slide-xs,
@@ -454,6 +450,24 @@ header nav ul li a:hover {
     border-left: none;
     padding-left: 0;
     margin-left: auto;
+  }
+  #story .slide-l {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #story .slide-l .overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    width: 60vw;
+    margin: 1rem auto;
+  }
+  #story .slide-l img {
+    left: 0;
+    width: 100%;
+    height: auto;
   }
   #contact .text {
     width: 50%;
