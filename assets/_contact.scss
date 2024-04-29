@@ -1,0 +1,76 @@
+#contact{
+    overflow: hidden;
+    background-color: $dark;
+    position: relative;
+    z-index: -300;
+    footer{
+        padding: 3rem 0;
+        .logo{
+            @include logo($color: $medium);
+            top: -13vh;
+            z-index: -100;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .menu, .text{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .menu{
+                nav{
+                    padding-bottom: 1rem;
+                    ul{
+                        @include menu($align: left, $justify: center, $background: none, $color: $xtlight, $direction: column, $padding: 0, $padLi: 0.5rem 0);
+                    }
+                }
+                .adress{
+                    h3{
+                        @include text($font: $title, $fweight: $light, $size: $textL, $color: $off, $transform: uppercase);
+                    }
+                    p{
+                        @include text($font: $text, $fweight: $regular, $size: $textXs, $color: $gotham);
+                    }
+                }
+            }
+            .text{
+                form{
+                    display: flex;
+                    justify-content: flex-end;
+                    #email{
+                        //width: 13rem;
+                        width: 25vw;
+                        background-color: $dark;
+                        border: 1px solid $colorLight;
+                        &:focus{
+                            border: 1px solid $gotham;
+                        }
+                    }
+                }
+                .callto, #email{
+                    @import "bouton";
+                    @include callTo($background: $medium, $color: $xtlight, $colorHv: $dark, $padding: 0.5rem);
+                }
+                #email{
+                    color: $off;
+                    text-align: left;
+                }
+                h2{
+                    padding-bottom: 3rem;
+                    @include text($font: $title, $fweight: $light, $size: $textL, $color: $xtlight, $transform: uppercase);
+                }
+            }
+        }
+    }
+    .copyright{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        background-color: $medium;
+        @include text($font: $text, $fweight: $light, $size: $textXs, $color: $off);
+    }
+}
