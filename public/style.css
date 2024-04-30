@@ -38,7 +38,7 @@
 }
 
 .slide {
-  height: 100vh;
+  height: 100%;
 }
 
 strong {
@@ -155,9 +155,6 @@ header nav ul li a:hover {
 #home .logo h1 {
   position: relative;
 }
-#home .logo h1 {
-  bottom: -3vh;
-}
 
 #infos {
   overflow: hidden;
@@ -182,6 +179,7 @@ header nav ul li a:hover {
   grid-column: 2;
   grid-row: 1/span 2;
   background-image: url("../images/batmobile6.jpeg");
+  background-position: center center;
 }
 #infos .slide-l #info1, #infos .slide-l #info2, #infos .slide-l #info3 {
   background-repeat: no-repeat;
@@ -486,7 +484,6 @@ header nav ul li a:hover {
     margin: 1.5rem auto;
   }
   #story .slide-l img {
-    left: 0;
     width: 100%;
     height: auto;
   }
@@ -502,9 +499,6 @@ header nav ul li a:hover {
   }
 }
 @media all and (max-width: 767.98px) {
-  #home .slide-m {
-    width: 100vw;
-  }
   #infos .slide-l {
     height: 100vh;
     grid-template-columns: 1fr;
@@ -521,6 +515,16 @@ header nav ul li a:hover {
   #infos .slide-l #info3 {
     grid-column: 1;
     grid-row: 3;
+  }
+}
+@media all and (max-width: 1080.98px) {
+  #home .slide-m {
+    height: max-content;
+  }
+}
+@media all and (max-width: 1780.98px) {
+  #story .slide-l {
+    height: max-content;
   }
 }
 /* GENERAL */
