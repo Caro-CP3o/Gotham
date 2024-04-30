@@ -4,21 +4,18 @@
     position: relative;
     z-index: -300;
     footer{
-        padding: 3rem 0;
+        //padding: 3rem 0;
+        padding-bottom: 2rem;
         .logo{
             @include logo($color: $medium);
-            top: -13vh;
+            top: -5vh;
             z-index: -100;
         }
         .container{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include container($justify: space-between ,$align: center);
             .menu, .text{
                 height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
+                @include container($direction: column, $justify: space-around ,$align: left);
             }
             .menu{
                 nav{
@@ -38,13 +35,12 @@
             }
             .text{
                 form{
-                    display: flex;
-                    justify-content: flex-end;
+                    @include container($justify: flex-end);
                     #email{
-                        //width: 13rem;
-                        width: 25vw;
+                        width: 10rem;
                         background-color: $dark;
-                        border: 1px solid $colorLight;
+                        //border: 1px solid $colorLight;
+                        box-shadow:0px 0px 0px 1px $colorLight inset;
                         &:focus{
                             border: 1px solid $gotham;
                         }
@@ -66,9 +62,7 @@
         }
     }
     .copyright{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include container;
         text-align: center;
         padding: 0.5rem;
         background-color: $medium;

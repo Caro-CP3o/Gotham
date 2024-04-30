@@ -1,7 +1,8 @@
 #infos{
+    overflow: hidden;
     .slide-l{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 50vw);
         grid-template-rows: repeat(2, 1fr);
         #info1{
             grid-column: 1;
@@ -31,9 +32,7 @@
         #info1, #info2{
             .overlay{
                 flex: 0.5;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include container;
                 background-color: $opacityDark;
 
             }
