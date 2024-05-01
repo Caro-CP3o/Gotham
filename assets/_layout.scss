@@ -35,7 +35,7 @@
     height: 100%;
 }
 // Flexbox
-@mixin container($direction: row, $justify: center ,$align: center, $wrap: nowrap){
+@mixin container($direction: row, $justify: center ,$align: center, $wrap: wrap){
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;

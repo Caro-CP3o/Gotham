@@ -94,7 +94,7 @@ header nav ul li a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 #home .text {
   width: 50%;
@@ -202,7 +202,7 @@ header nav ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color: rgba(30, 30, 30, 0.85);
 }
 
@@ -248,6 +248,7 @@ header nav ul li a:hover {
   overflow: hidden;
 }
 #story .slide-l .overlay {
+  padding: 2rem 0;
   position: absolute;
   top: 20%;
   left: 50%;
@@ -305,22 +306,23 @@ header nav ul li a:hover {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 #contact footer .container .menu, #contact footer .container .text {
+  flex: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: left;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
 }
 #contact footer .container .menu nav {
   padding-bottom: 1rem;
 }
 #contact footer .container .menu nav ul {
   display: flex;
-  align-items: left;
+  align-items: start;
   justify-content: center;
   flex-direction: column;
   background-color: none;
@@ -338,6 +340,9 @@ header nav ul li a:hover {
 }
 #contact footer .container .menu nav ul li a:hover {
   color: #E5C65A;
+}
+#contact footer .container .menu nav ul li {
+  flex: 1;
 }
 #contact footer .container .menu .adress h3 {
   letter-spacing: 0.09em;
@@ -362,7 +367,7 @@ header nav ul li a:hover {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 #contact footer .container .text form #email {
   width: 10rem;
@@ -411,7 +416,7 @@ header nav ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   text-align: center;
   padding: 0.5rem;
   background-color: #4C4C4C;
@@ -425,7 +430,22 @@ header nav ul li a:hover {
 }
 
 /* MediaQueries */
+@media all and (max-width: 319.98px) {
+  #contact .menu {
+    padding-bottom: 1rem;
+  }
+  #contact .menu ul {
+    flex-direction: row;
+  }
+}
 @media all and (max-width: 424.98px) {
+  .slide-xs,
+  .slide-s,
+  .slide-sm,
+  .slide-m,
+  .slide-l {
+    height: max-content;
+  }
   header nav {
     display: none;
   }
@@ -439,24 +459,8 @@ header nav ul li a:hover {
     width: 100%;
     padding-bottom: 1rem;
   }
-  #contact .container {
-    flex-direction: column;
-  }
-  #contact .container > * {
-    width: 100%;
-  }
-  #contact .container .menu ul {
-    flex-direction: row;
-  }
 }
 @media all and (max-width: 575.98px) {
-  .slide-xs,
-  .slide-s,
-  .slide-sm,
-  .slide-m,
-  .slide-l {
-    height: max-content;
-  }
   .wrapper {
     width: 100%;
   }
@@ -471,36 +475,9 @@ header nav ul li a:hover {
     padding-left: 0;
     margin-left: auto;
   }
-  #story .slide-l {
-    display: flex;
-    flex-direction: column;
-  }
-  #story .slide-l .overlay {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: translate(0%, 0%);
-    width: 60vw;
-    margin: 1.5rem auto;
-  }
-  #story .slide-l img {
-    width: 100%;
-    height: auto;
-  }
-  #contact .text {
-    width: 50%;
-  }
-  #contact .text form {
-    flex-direction: column;
-    margin-left: auto;
-  }
-  #contact .text form .callto {
-    margin-left: auto;
-  }
 }
 @media all and (max-width: 767.98px) {
   #infos .slide-l {
-    height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
@@ -515,6 +492,23 @@ header nav ul li a:hover {
   #infos .slide-l #info3 {
     grid-column: 1;
     grid-row: 3;
+  }
+  #story .slide-l {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  #story .slide-l .overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 0%);
+    width: 60vw;
+    margin: 1.5rem auto;
+  }
+  #story .slide-l img {
+    width: 100%;
+    height: auto;
   }
 }
 @media all and (max-width: 1080.98px) {

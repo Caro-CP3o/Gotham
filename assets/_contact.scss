@@ -12,16 +12,24 @@
             z-index: -100;
         }
         .container{
-            @include container($justify: space-between ,$align: center);
+            @include container($justify: space-between);
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-between;
+            // align-items: center;;
             .menu, .text{
+                flex: 1;
                 height: 100%;
-                @include container($direction: column, $justify: space-around ,$align: left);
+                @include container($direction: column, $justify: space-between, $align: start);
             }
             .menu{
                 nav{
                     padding-bottom: 1rem;
                     ul{
-                        @include menu($align: left, $justify: center, $background: none, $color: $xtlight, $direction: column, $padding: 0, $padLi: 0.5rem 0);
+                        @include menu($align: start, $justify: center, $background: none, $color: $xtlight, $direction: column, $padding: 0, $padLi: 0.5rem 0);
+                        li{
+                            flex: 1;
+                        }
                     }
                 }
                 .adress{
