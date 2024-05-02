@@ -1,5 +1,5 @@
 #infos{
-    overflow: hidden;
+    //overflow: hidden;
     .slide-l{
         display: grid;
         grid-template-columns: repeat(2, 50vw);
@@ -35,8 +35,17 @@
                 flex: 0.5;
                 @include container;
                 background-color: $opacityDark;
-
             }
+        }
+        #info1:hover .overlay{
+            animation-name: slidein;
+            animation-duration: 2s;
+            transition: all 0.5s ease-in;
+        }
+        #info2:hover .overlay{
+            animation-name: slideout;
+            animation-duration: 2s;
+            transition: all 0.5s ease-in;
         }
     }
 }

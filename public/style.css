@@ -49,7 +49,10 @@ strong:hover {
   text-decoration: underline;
 }
 
-/* Pages */
+/* PAGES */
+header {
+  background-color: #1E1E1E;
+}
 header nav ul {
   display: flex;
   align-items: center;
@@ -71,7 +74,60 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #E5C65A;
 }
+header #burger {
+  width: 2rem;
+  margin-left: 2rem;
+  padding-top: 1rem;
+  display: none;
+}
+header #burger .bar {
+  background-color: #1E1E1E;
+  width: 100%;
+  height: 2px;
+  background-color: #F2F2F2;
+}
+header #burger .bar:nth-child(even) {
+  margin: 0.5rem 0;
+}
 
+#home {
+  overflow: hidden;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+@keyframes slideout {
+  from {
+    margin-right: 100%;
+  }
+  to {
+    margin-right: 0%;
+  }
+}
+@keyframes opacityin {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes colorpop {
+  0% {
+    background-color: #1E1E1E;
+  }
+  50% {
+    background-color: #E5C65A;
+  }
+  100% {
+    background-color: #1E1E1E;
+  }
+}
 #home #logo-home {
   display: flex;
   justify-content: center;
@@ -155,10 +211,23 @@ header nav ul li a:hover {
 #home .logo h1 {
   position: relative;
 }
-
-#infos {
-  overflow: hidden;
+#home .slide-m {
+  background-color: #D9D9D9;
+  animation-name: slidein;
+  animation-duration: 5s;
+  transition: 1s cubic-bezier(0.85, 0.11, 0, 1.96);
 }
+#home .text h1, #home .text p {
+  animation-name: opacityin;
+  animation-duration: 8s;
+}
+#home .callto a {
+  animation-name: colorpop;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  transition: all 0.5s ease-in-out;
+}
+
 #infos .slide-l {
   display: grid;
   grid-template-columns: repeat(2, 50vw);
@@ -204,6 +273,16 @@ header nav ul li a:hover {
   align-items: center;
   flex-wrap: wrap;
   background-color: rgba(30, 30, 30, 0.85);
+}
+#infos .slide-l #info1:hover .overlay {
+  animation-name: slidein;
+  animation-duration: 2s;
+  transition: all 0.5s ease-in;
+}
+#infos .slide-l #info2:hover .overlay {
+  animation-name: slideout;
+  animation-duration: 2s;
+  transition: all 0.5s ease-in;
 }
 
 #about {
@@ -276,6 +355,18 @@ header nav ul li a:hover {
   text-transform: none;
   color: #1E1E1E;
 }
+#story .slide-l .overlay .prev, #story .slide-l .overlay .next {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 60px;
+}
+#story .slide-l .overlay .prev {
+  left: -25%;
+}
+#story .slide-l .overlay .next {
+  right: -25%;
+}
 
 #contact {
   overflow: hidden;
@@ -309,7 +400,6 @@ header nav ul li a:hover {
   flex-wrap: wrap;
 }
 #contact footer .container .menu, #contact footer .container .text {
-  flex: 1;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -325,8 +415,9 @@ header nav ul li a:hover {
   align-items: start;
   justify-content: center;
   flex-direction: column;
-  background-color: none;
+  background-color: rgba(0, 0, 0, 0);
   padding-left: 0;
+  width: 100%;
 }
 #contact footer .container .menu nav ul li {
   padding: 0.5rem 0;
@@ -434,23 +525,21 @@ header nav ul li a:hover {
   #contact .menu {
     padding-bottom: 1rem;
   }
-  #contact .menu ul {
-    flex-direction: row;
-  }
 }
 @media all and (max-width: 424.98px) {
   .slide-xs,
   .slide-s,
   .slide-sm,
   .slide-m,
-  .slide-l {
+  .slide-l,
+  .slide {
     height: max-content;
   }
   header nav {
     display: none;
   }
-  .slide {
-    height: max-content;
+  header #burger {
+    display: block;
   }
   #home .slide-sm {
     flex-direction: column;
@@ -458,6 +547,12 @@ header nav ul li a:hover {
   #home .slide-sm .text {
     width: 100%;
     padding-bottom: 1rem;
+  }
+  #infos .slide-l {
+    height: 100vh;
+  }
+  #contact .container {
+    gap: 0 3rem;
   }
 }
 @media all and (max-width: 575.98px) {
@@ -478,20 +573,11 @@ header nav ul li a:hover {
 }
 @media all and (max-width: 767.98px) {
   #infos .slide-l {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
   }
-  #infos .slide-l #info1 {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  #infos .slide-l #info2 {
-    grid-column: 1;
-    grid-row: 2;
-  }
-  #infos .slide-l #info3 {
-    grid-column: 1;
-    grid-row: 3;
+  #infos .slide-l > * {
+    flex: 1;
   }
   #story .slide-l {
     height: 100vh;
@@ -509,6 +595,9 @@ header nav ul li a:hover {
   #story .slide-l img {
     width: 100%;
     height: auto;
+  }
+  #contact .menu, #contact .text {
+    flex: 1;
   }
 }
 @media all and (max-width: 1080.98px) {

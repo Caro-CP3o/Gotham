@@ -25,12 +25,33 @@
             p{
                 @include text;
             }
+            // .controls{
+            //     width: 100%;
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 20%;
+            //     transform: translate(-50%, -50%);
+            //     display: flex;
+            //     gap: 0 60vw;
+            //     //justify-content: space-between;
+            //     img{
+            //         width: 3rem;
+            //     }
+            // }
         }
-        // img{
-        //     position: relative;
-        //     //left: -10%;
-        //     //bottom: -5%;
-        //     //width: 122%;
-        // }
+        .overlay{
+            .prev, .next{
+                position: absolute;
+                top: 50%;
+                width: 60px;
+                height: 60px;
+            }
+            .prev{
+                left: -25%;
+            }
+            .next{
+                right: -25%;
+            }
+        }
     }
 }

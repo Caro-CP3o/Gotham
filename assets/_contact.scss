@@ -13,12 +13,8 @@
         }
         .container{
             @include container($justify: space-between);
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-between;
-            // align-items: center;;
             .menu, .text{
-                flex: 1;
+                //flex: 1;
                 height: 100%;
                 @include container($direction: column, $justify: space-between, $align: start);
             }
@@ -26,7 +22,9 @@
                 nav{
                     padding-bottom: 1rem;
                     ul{
-                        @include menu($align: start, $justify: center, $background: none, $color: $xtlight, $direction: column, $padding: 0, $padLi: 0.5rem 0);
+                        @include menu($align: start, $justify: center, $background: $opacityNull, $color: $xtlight, $direction: column, $padding: 0, $padLi: 0.5rem 0);
+                        width: 100%;
+                        //background-color: lightcoral;
                         li{
                             flex: 1;
                         }
