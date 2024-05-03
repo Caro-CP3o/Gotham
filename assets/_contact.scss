@@ -14,9 +14,8 @@
         .container{
             @include container($justify: space-between);
             .menu, .text{
-                //flex: 1;
                 height: 100%;
-                @include container($direction: column, $justify: space-between, $align: start);
+                @include container($direction: column, $justify: space-between, $align: start, $wrap: nowrap);
             }
             .menu{
                 nav{
@@ -43,7 +42,7 @@
                 form{
                     @include container($justify: flex-end);
                     #email{
-                        width: 10rem;
+                        //width: 10rem;
                         background-color: $dark;
                         //border: 1px solid $colorLight;
                         box-shadow:0px 0px 0px 1px $colorLight inset;

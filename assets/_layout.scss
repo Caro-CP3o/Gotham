@@ -9,6 +9,8 @@
 .slide-xs, .slide-s, .slide-sm, .slide-m, .slide-l, .slide{
     width: 100%;
     position: relative;
+    resize: both;
+    overflow: auto;
 }
 .slide-xs{
     height: math.div($fullHeight,9);
