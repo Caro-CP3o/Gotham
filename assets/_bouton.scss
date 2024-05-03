@@ -1,20 +1,25 @@
-@mixin callTo($background: $dark, $color: $neutral, $colorHv: $dark, $padding: 1rem){
-    display: block;
-    width: max-content;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: $title;
-    font-weight: $light;
-    font-size: $textXs;
-    font-style: normal;
-    padding: $padding;
-    background-color: $background;
-    border: none;
-    color: $color;
-    cursor: pointer;
-    transition: all .5s ease-in-out;
-    &:hover{
-        background-color: $gotham;
-        color: $colorHv;
-    }
+@mixin callTo(
+  $background: $dark,
+  $color: $neutral,
+  $colorHv: $dark,
+  $padding: 1rem
+) {
+  display: block;
+  width: max-content;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $title;
+  font-weight: $light;
+  font-size: $textXs;
+  font-style: normal;
+  padding: $padding;
+  background-color: $background;
+  border: none;
+  color: $color;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: $gotham;
+    color: $colorHv;
+  }
 }

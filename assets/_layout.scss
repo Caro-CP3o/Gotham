@@ -1,46 +1,54 @@
 @use "sass:math";
 
 // Largeur blocks
-.wrapper{
-    max-width: math.div($fullWidth,1.2);
-    margin: 0 auto;
+.wrapper {
+  max-width: math.div($fullWidth, 1.2);
+  margin: 0 auto;
 }
 // Hauteur blocs d'éléments
-.slide-xs, .slide-s, .slide-sm, .slide-m, .slide-l, .slide{
-    width: 100%;
-    position: relative;
-    resize: both;
-    overflow: auto;
+.slide-xs,
+.slide-s,
+.slide-sm,
+.slide-m,
+.slide-l,
+.slide {
+  width: 100%;
+  position: relative;
 }
-.slide-xs{
-    height: math.div($fullHeight,9);
-    //10%
+.slide-xs {
+  height: math.div($fullHeight, 9);
+  //10%
 }
-.slide-s{
-    height: math.div($fullHeight,5);
-    //20%
+.slide-s {
+  height: math.div($fullHeight, 5);
+  //20%
 }
-.slide-sm{
-    height: math.div($fullHeight,3.3);
-    //30%
+.slide-sm {
+  height: math.div($fullHeight, 3.3);
+  //30%
 }
-.slide-m{
-    height: math.div($fullHeight,2);
-    //50%
+.slide-m {
+  height: math.div($fullHeight, 2);
+  //50%
 }
-.slide-l{
-    height: math.div($fullHeight,1.1);
-    //90%
+.slide-l {
+  height: math.div($fullHeight, 1.1);
+  //90%
 }
-.slide{
-    //height: $fullHeight;
-    height: 100%;
+.slide {
+  //height: $fullHeight;
+  height: 100%;
 }
 // Flexbox
-@mixin container($direction: row, $justify: center ,$align: center, $wrap: wrap){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-    flex-wrap: $wrap;
+@mixin container(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $wrap: wrap
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
 }

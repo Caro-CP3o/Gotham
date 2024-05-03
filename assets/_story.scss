@@ -1,45 +1,51 @@
-#story{
-    background-color: $xtlight;
-    .logo{
-        @include logo($color: $neutral, $justify: space-between);
-        h1{
-            bottom: -3vh;
-            z-index: 300;
-        }
+#story {
+  background-color: $xtlight;
+  .logo {
+    @include logo($color: $neutral, $justify: space-between);
+    h1 {
+      bottom: -3vh;
+      z-index: 300;
     }
-    .slide-l{
-        overflow: hidden;
-        .overlay{
-            padding: 2rem 0;
-            position: absolute;
-            top: 20%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40vw;
-            z-index: 300;
-            h2{
-                @include text($font: $title, $fweight: $black, $size: $textL, $transform: uppercase);
-                text-align: center;
-                padding-bottom: 1rem;
-            }
-            p{
-                @include text;
-            }
-        }
-        /* slideshow controls */
-        .overlay{
-            .prev, .next{
-                position: absolute;
-                top: 50%;
-                width: 60px;
-                height: 60px;
-            }
-            .prev{
-                left: -25%;
-            }
-            .next{
-                right: -25%;
-            }
-        }
+  }
+  .slide-l {
+    overflow: hidden;
+    .overlay {
+      padding: 2rem 0;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 40vw;
+      z-index: 300;
+      h2 {
+        @include text(
+          $font: $title,
+          $fweight: $black,
+          $size: $textL,
+          $transform: uppercase
+        );
+        text-align: center;
+        padding-bottom: 1rem;
+      }
+      p {
+        @include text;
+      }
     }
+    /* slideshow controls */
+    .overlay {
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        width: 60px;
+        height: 60px;
+      }
+      .prev {
+        left: -25%;
+      }
+      .next {
+        right: -25%;
+      }
+    }
+  }
 }

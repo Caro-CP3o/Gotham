@@ -1,23 +1,31 @@
-@mixin menu($align: center, $justify: left, $background: $dark, $color: $neutral, $direction: row, $padding: 2rem, $padLi: 1rem){
-    display: flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-direction: $direction;
-    flex-wrap: wrap;
-    background-color: $background;
-    padding-left: $padding;
-    li{
-        padding: $padLi;
-        a{
-            color: $color;
-            font-family: $title;
-            font-size: $textXs;
-            font-weight: $light;
-            text-transform: uppercase;
-            display: block;
-            &:hover{
-                color: $gotham;
-            }
-        }
+@mixin menu(
+  $align: center,
+  $justify: left,
+  $background: $dark,
+  $color: $neutral,
+  $direction: row,
+  $padding: 2rem,
+  $padLi: 1rem
+) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+  flex-direction: $direction;
+  flex-wrap: wrap;
+  background-color: $background;
+  padding-left: $padding;
+  li {
+    padding: $padLi;
+    a {
+      color: $color;
+      font-family: $title;
+      font-size: $textXs;
+      font-weight: $light;
+      text-transform: uppercase;
+      display: block;
+      &:hover {
+        color: $gotham;
+      }
     }
+  }
 }

@@ -1,57 +1,61 @@
-#home{
-    @import "bouton";
-    @import "keyframe";
-    overflow: hidden;
-    #logo-home{
-        @include logo;
-        background-color: $dark;
-        h1{
-            bottom: -2vh;
-        }
+#home {
+  @import "bouton";
+  @import "keyframe";
+  overflow: hidden;
+  #logo-home {
+    @include logo;
+    background-color: $dark;
+    h1 {
+      bottom: -2vh;
     }
-    .container{
-        @include container($justify: space-between);
+  }
+  .container {
+    @include container($justify: space-between);
+  }
+  .text {
+    width: 50%;
+    h1 {
+      padding-bottom: 1rem;
+      @include text(
+        $font: $title,
+        $fweight: $black,
+        $size: $textL,
+        $transform: uppercase
+      );
     }
-    .text{
-        width: 50%;
-        h1{
-            padding-bottom: 1rem;
-            @include text($font: $title, $fweight: $black, $size: $textL, $transform: uppercase);
-        }
-        p{
-            @include text;
-        }
+    p {
+      @include text;
     }
-    .callto{
-        border-left: 1px solid $dark;
-        padding-left: 5rem;
-        a{
-            @include callTo;
-        }
+  }
+  .callto {
+    border-left: 1px solid $dark;
+    padding-left: 5rem;
+    a {
+      @include callTo;
     }
-    .logo{
-        @include logo($color: $colorLight, $justify: space-between);
-       
-        
+  }
+  .logo {
+    @include logo($color: $colorLight, $justify: space-between);
+  }
+  .slide-m {
+    background-color: $colorLight;
+    animation-name: slidein;
+    animation-duration: 5s;
+    // transition: all 0.5s ease-in;
+    transition: 1s cubic-bezier(0.85, 0.11, 0, 1.96);
+    //cubic-bezier(0.02, 1.03, 0.26, 0.94)
+  }
+  .text {
+    h1,
+    p {
+      animation-name: opacityin;
+      animation-duration: 8s;
     }
-    .slide-m{
-        background-color: $colorLight;
-        animation-name: slidein;
-        animation-duration: 5s;
-        // transition: all 0.5s ease-in;
-        transition: 1s cubic-bezier(0.85, 0.11, 0, 1.96);
-        //cubic-bezier(0.02, 1.03, 0.26, 0.94)
-    }
-    .text{
-        h1, p{
-            animation-name: opacityin;
-            animation-duration: 8s;
-        }
-    }
-    .callto a{
-        animation-name: colorpop;
-        animation-duration: 5s;
-        animation-delay: 2s;
-        transition: all 0.5s ease-in-out; 
-    }
+  }
+  .callto a {
+    animation-name: colorpop;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    transition: all 0.5s ease-in-out;
+  }
 }

@@ -1,139 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public/style.css" />
     <title>Batmobile</title>
-    <link rel="icon" type="image/x-icon" href="./icones/batFavicon1.png">
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="./icones/batFavicon1.png" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
+      <nav>
+        <ul>
+          <li><a href="#home">home</a></li>
+          <li><a href="#infos">infos</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#story">story</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+      <div id="burger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </header>
+    <!-- HOME -->
+    <section id="home" class="slide">
+      <div id="logo-home" class="logo slide-xs">
+        <h1>Batmobile</h1>
+      </div>
+      <div class="slide-m">
+        <img src="images/batmobile8.jpeg" alt="batmobile car side" />
+      </div>
+      <div class="slide-sm container wrapper">
+        <div class="text">
+          <h1>Laissez-vous porter par la légende</h1>
+          <p>
+            Silencieuse comme l’ombre, elle sera votre alliée dans vos nombreuse
+            aventures !
+          </p>
+        </div>
+        <div class="callto">
+          <a href="#">En savoir plus</a>
+        </div>
+      </div>
+      <div class="logo slide-xs container">
+        <h1>Bat</h1>
+        <h1>Mobile</h1>
+      </div>
+    </section>
+    <!-- INFOS -->
+    <section id="infos">
+      <!-- <div class="slide-xs"></div> -->
+      <div class="slide-l">
+        <div id="info1">
+          <div class="overlay">
+            <h2>une tenue de route d’exception</h2>
+            <p></p>
+          </div>
+        </div>
+        <div id="info2">
+          <div class="overlay">
+            <h2>Une puissance hors du commun</h2>
+            <p></p>
+          </div>
+        </div>
+        <div id="info3">
+          <!-- <div class="overlay">
+                    <h2></h2>
+                    <p></p>
+                </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="logo slide-xs">
+        <h1>Batmobile</h1>
+      </div>
+      <div class="slide-l">
+        <img src="images/batmobile10.jpeg" alt="batmobile video about" />
+      </div>
+    </section>
+    <!-- STORY -->
+    <section id="story">
+      <div class="logo slide-xs">
+        <h1>Mobile</h1>
+        <h1>Bat</h1>
+      </div>
+      <div class="slide-l">
+        <div class="overlay">
+          <div class="prev">
+            <img src="icones/back.png" alt="arrow previous" />
+          </div>
+          <div class="text">
+            <h2>Une puissance hors du commun</h2>
+            <p>Laissez-vous porter par la légende</p>
+            <p>
+              Silencieuse comme l’ombre, elle sera votre alliée dans vos
+              nombreuse aventures !
+            </p>
+          </div>
+          <div class="next">
+            <img src="icones/right.png" alt="arrow next" />
+          </div>
+        </div>
+        <img id="imgStory" src="images/batmobile9.jpeg" alt="batmobile side" />
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <footer class="wrapper">
+        <div class="logo slide-xs">
+          <h1>Batmobile</h1>
+        </div>
+        <div class="container slide-sm">
+          <div class="menu">
+            <nav>
+              <ul>
                 <li><a href="#home">home</a></li>
                 <li><a href="#infos">infos</a></li>
                 <li><a href="#about">about</a></li>
                 <li><a href="#story">story</a></li>
                 <li><a href="#contact">contact</a></li>
-            </ul>
-        </nav>
-        <div id="burger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-    </header>
-    <!-- HOME -->
-    <section id="home" class="slide">
-        <div id="logo-home" class="logo slide-xs">
-            <h1>Batmobile</h1>
-        </div>
-        <div class="slide-m">
-            <img src="images/batmobile8.jpeg" alt="batmobile car side">
-        </div>
-        <div class="slide-sm container wrapper">
-            <div class="text">
-                <h1>Laissez-vous porter par la légende</h1>
-                <p>Silencieuse comme l’ombre, elle sera votre alliée dans vos nombreuse aventures !</p>
+              </ul>
+            </nav>
+            <div class="adress">
+              <h3>Contact us :</h3>
+              <p>968 Crest Hill - 10001 Gotham City</p>
             </div>
-            <div class="callto">
-                <a href="#">En savoir plus</a>
-            </div>
+          </div>
+          <div class="text">
+            <h2>
+              Vous voulez en savoir plus <br />et vite ?<br />
+              Envoyez-nous un batsignal
+            </h2>
+            <form action="GET">
+              <label for="email">Votre e-mail</label>
+              <input type="email" name="email" id="email" value="votre email" />
+              <input type="submit" value="envoyer" class="callto" />
+            </form>
+          </div>
         </div>
-        <div class="logo slide-xs container">
-            <h1>Bat</h1>
-            <h1>Mobile</h1>
-        </div>
+      </footer>
+      <div class="copyright">
+        <p>
+          Site réalisé dans le cadre de la formation webdev EPSE©CarolePes 2024
+        </p>
+      </div>
     </section>
-    <!-- INFOS -->
-    <section id="infos">
-        <!-- <div class="slide-xs"></div> -->
-        <div class="slide-l">
-            <div id="info1">
-                <div class="overlay">
-                    <h2>une tenue  de route d’exception</h2>
-                    <p></p>
-                </div>
-            </div>
-            <div id="info2">
-                <div class="overlay">
-                    <h2>Une puissance hors du commun</h2>
-                    <p></p>
-                </div>
-            </div>
-            <div id="info3">
-                <!-- <div class="overlay">
-                    <h2></h2>
-                    <p></p>
-                </div> -->
-            </div>
-        </div>
-    </section>
-    <!-- ABOUT -->
-    <section id="about">
-        <div class="logo slide-xs">
-            <h1>Batmobile</h1>
-        </div>
-        <div class="slide-l">
-            <img src="images/batmobile10.jpeg" alt="batmobile video about">
-        </div>
-    </section>
-    <!-- STORY -->
-    <section id="story">
-        <div class="logo slide-xs">
-            <h1>Mobile</h1>
-            <h1>Bat</h1>
-        </div>
-        <div class="slide-l">
-            <div class="overlay">
-                <div class="prev"><img src="icones/back.png" alt="arrow previous"></div>
-                <div class="text">
-                    <h2>Une puissance hors du commun</h2>
-                    <p>Laissez-vous porter par la légende</p>
-                    <p>Silencieuse comme l’ombre, elle sera votre alliée dans vos nombreuse aventures !</p>
-                </div>
-                <div class="next"><img src="icones/right.png" alt="arrow next"></div>
-            </div>
-            <img id="imgStory" src="images/batmobile9.jpeg" alt="batmobile side">
-        </div>
-    </section>
-    <!-- CONTACT -->
-    <section id="contact">
-        <footer class="wrapper">
-            <div class="logo slide-xs">
-                <h1>Batmobile</h1>
-            </div>
-            <div class="container slide-sm">
-                <div class="menu">
-                    <nav>
-                        <ul>
-                            <li><a href="#home">home</a></li>
-                            <li><a href="#infos">infos</a></li>
-                            <li><a href="#about">about</a></li>
-                            <li><a href="#story">story</a></li>
-                            <li><a href="#contact">contact</a></li>
-                        </ul>
-                    </nav>
-                    <div class="adress">
-                        <h3>Contact us :</h3>
-                        <p>968 Crest Hill - 10001 Gotham City</p>
-                    </div>
-                </div>
-                <div class="text">
-                    <h2>Vous voulez en savoir plus <br>et vite ?<br> 
-                        Envoyez-nous un batsignal</h2>
-                    <form action="GET">
-                        <label for="email">Votre e-mail</label>
-                        <input type="email" name="email" id="email" value="votre email">
-                        <input type="submit" value="envoyer" class="callto">
-                    </form>
-                </div>
-            </div>
-        </footer>
-        <div class="copyright">
-            <p>Site réalisé dans le cadre de la formation webdev EPSE©CarolePes 2024</p>
-        </div>
-    </section>
-</body>
+  </body>
 </html>
