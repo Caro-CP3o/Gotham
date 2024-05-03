@@ -50,6 +50,9 @@
                             border: 1px solid $gotham;
                         }
                     }
+                    label{
+                        opacity: 0;
+                    }
                 }
                 .callto, #email{
                     @import "bouton";

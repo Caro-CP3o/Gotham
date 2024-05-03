@@ -484,6 +484,9 @@ header #burger .bar:nth-child(even) {
 #contact footer .container .text form #email:focus {
   border: 1px solid #E5C65A;
 }
+#contact footer .container .text form label {
+  opacity: 0;
+}
 #contact footer .container .text .callto, #contact footer .container .text #email {
   display: block;
   width: max-content;
@@ -539,7 +542,7 @@ header #burger .bar:nth-child(even) {
 }
 
 /* MediaQueries */
-@media all and (max-width: 319.98px) {
+@media all and (max-width: 376.98px) {
   #contact .menu {
     padding-bottom: 1rem;
   }

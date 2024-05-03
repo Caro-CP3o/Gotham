@@ -1,26 +1,11 @@
-@media all and (max-width: 319.98px){
+@media all and (max-width: 376.98px){
     #contact{
         .menu{
-            //background-color: lightblue;
             padding-bottom: 1rem;
-            // nav{
-            //     ul{
-            //         flex-direction: row;
-            //         background-color: lime;
-            //     }
-            // }
         }
     }
 }
 @media all and (max-width: 424.98px){
-    // .slide-xs,
-    // .slide-s,
-    // .slide-sm,
-    // .slide-m,
-    // .slide-l,
-    // .slide{
-    //     height: max-content;
-    // }
     header{
         nav{
             display: none;
@@ -39,10 +24,6 @@
                 }
             }
     }
-
-    // #infos .slide-l{
-    //     height: 100vh;
-    // }
     #contact{
         .slide-sm{
             height: max-content;
